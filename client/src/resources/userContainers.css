@@ -1,0 +1,46 @@
+.user-container {
+    position: relative;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--secondary);
+    border-radius: 0.8rem;
+    margin-top: 15px;
+
+}
+
+.user-container:hover {
+    border: 3px solid rgb(4, 113, 26);
+    cursor: pointer;
+}
+
+.user-container .user-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-container .user-content div{
+    display: flex;
+    flex-direction: row;
+}
+
+.user-container .item {
+    display: inline-block;
+    max-width: 300px;
+    overflow-wrap: break-word;
+    margin-right: 60px;
+    line-height: 2;
+}
+
+.user-container .label {
+    margin-right: 6px;
+    font-size: 1.1rem;
+}
+
+.user-container .value {
+    font-size: 1.1rem;
+}

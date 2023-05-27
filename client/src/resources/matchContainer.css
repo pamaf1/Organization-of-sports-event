@@ -1,0 +1,45 @@
+.match-container {
+    position: relative;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--secondary);
+    border-radius: 0.8rem;
+    margin-top: 15px;
+
+}
+
+.match-container:hover {
+    border: 3px solid rgb(4, 113, 26);
+    cursor: pointer;
+}
+
+.match-container .match-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.match-container .match-content div{
+    display: flex;
+    flex-direction: column;
+}
+
+.match-container .item {
+    display: inline-block;
+    max-width: 300px;
+    overflow-wrap: break-word;
+    margin-right: 60px;
+    line-height: 2;
+}
+
+.match-container .label {
+    font-size: 1.1rem;
+}
+
+.match-container .value {
+    font-size: 1.1rem;
+}

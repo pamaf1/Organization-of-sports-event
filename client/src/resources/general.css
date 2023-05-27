@@ -1,0 +1,126 @@
+.h-screen {
+    height: 100vh;
+  }
+  
+.w-400 {
+    width: 400px;
+}
+
+input,
+select, textarea{
+  height: 40px;
+  border: 2px solid black;
+  width: 100%;
+  padding-left: 20px;
+}
+
+textarea{
+  margin-top: 10px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  min-height: 200px !important;
+}
+
+
+.card {
+  border: 2px solid gray;
+  box-shadow: 0 0 1px rgb(189, 189, 189);
+  border-radius: 0 !important;
+}
+
+.text-xl {
+  font-size: 25px !important;
+}
+.text-lg {
+  font-size: 20px !important;
+}
+.text-md {
+  margin-top: 40px;
+  font-size: 18px !important;
+}
+
+.secondary-text {
+  color: var(--secondary) !important;
+}
+.primary-text {
+  color: var(--primary) !important;
+}
+
+.primary-btn {
+  background-color: var(--primary);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.third-btn {
+  background-color: var(--third);
+  border-radius: 6%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.fourth-btn {
+  background-color: var(--secondary);
+  display: end;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left:48vmax;
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--primary) !important;
+}
+
+i {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+h1, p {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.spinner-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(165, 165, 165, 0.507);
+}
+.spinner-border {
+  color: black !important;
+  height: 70px !important;
+  width: 70px !important;
+}
+
+
+.rate-text {
+  margin-top: 10px;
+}
