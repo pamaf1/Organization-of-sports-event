@@ -7,7 +7,7 @@ import {Form, message, Table, Row, Col, Input, Button, DatePicker} from 'antd';
 import { DeleteMatch, GetMatchByUserId } from "../apiHelper/matches";
 import { useNavigate } from "react-router-dom";
 import { makeDate } from "../helpFunction/dateFormat";
-import moment from 'moment-timezone';
+import moment from 'moment';
 const { RangePicker } = DatePicker;
 
 

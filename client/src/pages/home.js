@@ -5,7 +5,7 @@ import { HideLoading, ShowLoading } from '../redux/alertSlice';
 import { Form, message, Row, Col, Input, Button, DatePicker, Pagination } from 'antd';
 import { axiosInstance } from '../helpFunction/axiosInstances';
 import Match from '../components/match'
-import moment from 'moment-timezone';
+import moment from 'moment';
 const { RangePicker } = DatePicker;
 
 function Home() {
