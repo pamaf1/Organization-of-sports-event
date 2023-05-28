@@ -72,28 +72,28 @@ function MatchInfo() {
           <Row className="mt-3" gutter={[30, 30]}>
             <Col lg={24} xs={24} sm={24}>
                 <div className="flex flex-col gap-2 ">
-                    <h1 h1 className="text-md">
+                    <h1 h1 className="text-small">
                     Організатор: {match?.createdBy.login}
                     </h1>
-                    <p className="text-md">
+                    <p className="text-small">
                         Адреса проведення: {match?.place}
                     </p>
-                    <p className="text-md">
+                    <p className="text-small">
                         Дата проведення: {makeDate(match?.date)}
                     </p>
-                    <p className="text-md">
+                    <p className="text-small">
                         Час проведення: {match?.time}
                     </p>
-                    <p className="text-md">
+                    <p className="text-small">
                         Кількість зареєстрованих на матч користувачів: {match?.registeredUsers.length ?  match?.registeredUsers.length : 0}/{match?.partisipants}
                     </p>
-                    <p className="text-md">
+                    <p className="text-small">
                         {'Зареєстровані на матч користувачі: ' + match?.registeredUsers.map((user) => {return (" "+user?.login)})}                
                     </p>
-                    <p className="text-md">
+                    <p className="text-small">
                         Контактні дані організатора: {match?.contacts}
                     </p>
-                    <p className="text-md">
+                    <p className="text-small">
                         Опис: {match?.description}
                     </p>
                     </div>

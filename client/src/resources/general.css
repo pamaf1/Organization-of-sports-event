@@ -28,13 +28,13 @@ textarea{
   border-radius: 0 !important;
 }
 
-.text-xl {
+.text-big {
   font-size: 25px !important;
 }
-.text-lg {
+.text-ex {
   font-size: 20px !important;
 }
-.text-md {
+.text-small {
   margin-top: 40px;
   font-size: 18px !important;
 }

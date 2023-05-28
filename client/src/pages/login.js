@@ -31,7 +31,7 @@ function Login() {
     return (
         <div className='h-screen d-flex justify-content-center align-items-center'>
             <div className='w-400 card p-3'>
-                <h1 className='text-lg'>Login</h1>
+                <h1 className='text-ex'>Login</h1>
                 <hr />
                 <Form layout='vertical' onFinish={onFinish}>
                     <Form.Item label="Email" name='email'>

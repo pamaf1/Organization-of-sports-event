@@ -67,7 +67,7 @@ function UserInfo() {
         users && (
             <div>
                 <div className="flex justify-between items-center mt-5">
-                    <span className="text-xl flex-grow-0">Відгуки про користувача: {users.login}
+                    <span className="text-big flex-grow-0">Відгуки про користувача: {users.login}
 
                     </span>
                     {
