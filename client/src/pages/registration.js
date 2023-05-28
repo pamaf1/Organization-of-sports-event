@@ -43,7 +43,7 @@ function Registration() {
                     </Form.Item>
                     <Form.Item label="Login" name='login' rules={[
                         { required: true, message: 'Введіть логін' },
-                        { pattern: /^[A-Za-z0-9#$%^&_+\-=]+$/, message: 'Логін невірний' },
+                        { pattern: /^[A-Za-z0-9#$%^&_+\-=]+$/, message: 'Некоректний логін' },
                         { max: 10 },
                         ]}
                     >
@@ -53,7 +53,7 @@ function Registration() {
                         <input type="email" required/>
                     </Form.Item>
                     <Form.Item label="Password" name='password' rules={[
-                        { required: true, message: 'Введіть логін' },
+                        { required: true, message: 'Введіть пароль' },
                         { minlength: 5},
                         { maxlength: 15}]}
                         >
