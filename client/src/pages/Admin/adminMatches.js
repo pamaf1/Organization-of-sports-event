@@ -8,7 +8,7 @@ import { axiosInstance } from '../../helpFunction/axiosInstances';
 import { DeleteMatch } from "../../apiHelper/matches";
 import { useNavigate } from "react-router-dom";
 import { makeDate } from "../../helpFunction/dateFormat";
-import moment from 'moment';
+import moment from 'moment-timezone';
 const { RangePicker } = DatePicker;
 
 function AdminMatches() {
