@@ -25,7 +25,7 @@ function AdminMatches() {
         try {
             dispatch(ShowLoading());
             // const matchResponse = await axiosInstance.post('/api/matches/get-match-by-userId', {user: user._id});
-            const matchResponse = await axiosInstance.get('/api/matches/get-all-match', {});
+            const matchResponse = await axiosInstance.get('https://match-organize.onrender.com/api/matches/get-all-match', {});
             dispatch(HideLoading());
             if(matchResponse.data.success)
             {

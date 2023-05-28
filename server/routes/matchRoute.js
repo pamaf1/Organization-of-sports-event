@@ -31,7 +31,7 @@ router.get("/get-match-by-userId", authMiddleware, async (req, res) => {
 
 // get all match
 
-router.get("/get-all-match", async (req, res) => {
+router.get("/get-all-match", authMiddleware, async (req, res) => {
   try {
       const matches = await Match.find().populate('createdBy').populate('registeredUsers');
       res.status(200).send({ data: matches, success: true });

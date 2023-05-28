@@ -18,7 +18,7 @@ function Users() {
     const getUsers = async () => {
         try {
             dispatch(ShowLoading());
-            const usersResponse = await axiosInstance.get('/api/users/get-all-users', {});
+            const usersResponse = await axiosInstance.get('https://match-organize.onrender.com/api/users/get-all-users', {});
             dispatch(HideLoading());
             if(usersResponse.data.success)
             {

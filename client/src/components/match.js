@@ -8,7 +8,7 @@ function Match({match}) {
     return (
       <div className="match-container"
         onClick={() => {
-            navigation(`/match/${match._id}`);
+            navigation(`https://match-organize.onrender.com/match/${match._id}`);
         }}>
             <div className="match-content">
                 <div className="item">

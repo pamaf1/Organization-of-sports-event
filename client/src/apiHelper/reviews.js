@@ -3,7 +3,7 @@ import apiRequest from ".";
 export const AddNewReview = async (payload) => {
     return await apiRequest({
       method: "POST",
-      endPoint: "/api/reviews",
+      endPoint: "https://match-organize.onrender.com/api/reviews",
       payload,
     });
 };
@@ -11,7 +11,7 @@ export const AddNewReview = async (payload) => {
 export const GetAllReviews = async (payload) => {
     return await apiRequest({
       method: "GET",
-      endPoint: `/api/reviews`,
+      endPoint: `https://match-organize.onrender.com/api/reviews`,
       queryStrings: payload,
     });
 };
@@ -19,7 +19,7 @@ export const GetAllReviews = async (payload) => {
 export const DeleteReview = async (payload) => {
     return await apiRequest({
       method: "DELETE",
-      endPoint: `/api/reviews/${payload._id}`,
+      endPoint: `https://match-organize.onrender.com/api/reviews/${payload._id}`,
       payload,
     });
 };

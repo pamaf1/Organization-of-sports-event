@@ -19,7 +19,7 @@ function Home() {
     const getMatches = async () => {
         try {
             dispatch(ShowLoading());
-            const matchResponse = await axiosInstance.get('/api/matches/get-all-match', {});
+            const matchResponse = await axiosInstance.get('https://match-organize.onrender.com/api/matches/get-all-match', {});
             dispatch(HideLoading());
             if(matchResponse.data.success)
             {

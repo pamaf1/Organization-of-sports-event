@@ -34,10 +34,10 @@ function MatchForm({showMatchForm, setShowMatchForm, type = 'add', selectedMatch
             dispatch(ShowLoading())
             let response = null;
             if(type === 'add'){
-                response = await axiosInstance.post('/api/matches/', values)
+                response = await axiosInstance.post('https://match-organize.onrender.com/api/matches/', values)
             }
             else{
-                response = await axiosInstance.put('/api/matches/update-match', {
+                response = await axiosInstance.put('https://match-organize.onrender.com/api/matches/update-match', {
                     ...values,
                     _id: selectedMatch._id
                 })

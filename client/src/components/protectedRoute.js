@@ -16,7 +16,7 @@ function ProtectedRoute({children}) {
     const validationToken = async () => {
        try {
         dispatch(ShowLoading());
-        const response = await axios.post("/api/users/get-user-by-id", {}, 
+        const response = await axios.post("https://match-organize.onrender.com/api/users/get-user-by-id", {}, 
             {
                 headers : {
                     Authorization : `Bearer ${localStorage.getItem("token")}`,

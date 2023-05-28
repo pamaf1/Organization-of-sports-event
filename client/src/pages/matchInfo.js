@@ -31,7 +31,7 @@ function MatchInfo() {
     const registrateUser = async () => {
         try {
             dispatch(ShowLoading());
-            const response = await axiosInstance.post("/api/registration/", {
+            const response = await axiosInstance.post("https://match-organize.onrender.com/api/registration/", {
                 match: match?._id,
             });
             dispatch(HideLoading());

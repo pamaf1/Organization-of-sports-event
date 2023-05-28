@@ -12,7 +12,7 @@ function Registration() {
     const onFinish = async(values) => {
         try {
             dispatch(ShowLoading());
-            const response = await axios.post("/api/users/registration", values);
+            const response = await axios.post("https://match-organize.onrender.com/api/users/registration", values);
             dispatch(HideLoading());
             if(response.data.success)
             {
