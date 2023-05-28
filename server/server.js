@@ -5,11 +5,12 @@ const matchRoute = require('./routes/matchRoute');
 const matchRegistrationRoute = require('./routes/matchRegistrationRoute');
 const reviewRoute = require('./routes/reviewRoute');
 const port = process.env.PORT || 5000;
+const cors = require("cors")
 const app = express();
 const dbConfig = require("./config/dbConfig");
 app.use(express.json())
 
-
+app.use(cors())
 app.use('/api/users', usersRoute);
 app.use('/api/matches', matchRoute);
 app.use('/api/registration', matchRegistrationRoute);
