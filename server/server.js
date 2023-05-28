@@ -8,9 +8,11 @@ const port = process.env.PORT || 5000;
 const cors = require("cors")
 const app = express();
 const dbConfig = require("./config/dbConfig");
+const cookieParser = require("cookie-parser")
 app.use(express.json())
 
 app.use(cors())
+app.use(cookieParser())
 app.use('/api/users', usersRoute);
 app.use('/api/matches', matchRoute);
 app.use('/api/registration', matchRegistrationRoute);
