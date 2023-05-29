@@ -9,10 +9,15 @@ function ReviewForm({user, reloadData, showReviewForm, setShowReviewForm, select
     const dispatch = useDispatch();
     const [rating, setRating] = useState();
     const [comment, setComment] = useState("");
+    const [isButtonDisabled, setButtonDisabled] = useState(false);
 
     const addReview = async () => {
         try {
+            if (isButtonDisabled) {
+              return;
+            }        
             dispatch(ShowLoading(true));
+            setButtonDisabled(true);
             const response = await AddNewReview({user: user._id, rating, comment});
             message.success(response.message);
             reloadData();
@@ -31,7 +36,7 @@ function ReviewForm({user, reloadData, showReviewForm, setShowReviewForm, select
           onCancel={() => setShowReviewForm(false)}
           centered
           title='Додати відгук'
-          onOk={addReview}>
+          onOk={addReview} disabled={isButtonDisabled}>
           <div className="flex flex-col gap-2 w-full">
             <div className="flex w-full">
               <span className="font-semibold">Користувач : </span>

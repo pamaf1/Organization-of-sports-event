@@ -15,6 +15,7 @@ function MatchInfo() {
     const [match, setMatch] = useState();
     const { id } = useParams();
     const { user } = useSelector((state) => state.users);
+    const [isButtonDisabled, setButtonDisabled] = useState(false);
 
     const getMatchData = async () => {
         try {
@@ -30,7 +31,11 @@ function MatchInfo() {
 
     const registrateUser = async () => {
         try {
+            if (isButtonDisabled) {
+                return;
+            }        
             dispatch(ShowLoading());
+            setButtonDisabled(true);
             const response = await axiosInstance.post("https://match-organize.onrender.com/api/registration/", {
                 match: match?._id,
             });
@@ -49,7 +54,11 @@ function MatchInfo() {
 
     const deleteUser = async () => {
         try {
+            if (isButtonDisabled) {
+                return;
+            }        
             dispatch(ShowLoading());
+            setButtonDisabled(true);
             const response = await DeleteRegistration({match: match?._id});
             message.success(response.message);
             navigation("/")
@@ -101,13 +110,13 @@ function MatchInfo() {
                 { match?.createdBy._id === user._id ? '' :
                     isRegistered ? (
                     <div>
-                        <button className="third-btn" onClick={() => deleteUser()}>Скасувати реєстрацію</button>
+                        <button className="third-btn" onClick={() => deleteUser()} disabled={isButtonDisabled}>Скасувати реєстрацію</button>
                     </div>
                     ) 
                     :
                     (
                         <div>
-                            <button className='secondary-btn'  onClick={() => registrateUser()}>Зареєструватися</button>
+                            <button className='secondary-btn'  onClick={() => registrateUser()} disabled={isButtonDisabled}>Зареєструватися</button>
                         </div>
                     )
                 }

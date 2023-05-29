@@ -34,10 +34,10 @@ function UserInfo() {
 
     const deleteReview =  async (review) => {
         try {
-            document.location.reload()
             dispatch(ShowLoading(true));
             const reviewsDeleteResponse = await DeleteReview({_id: review._id, user: review.user._id});
             message.success(reviewsDeleteResponse.message);
+            document.location.reload()
             getReview();
             dispatch(HideLoading(false));
         } catch (error) {

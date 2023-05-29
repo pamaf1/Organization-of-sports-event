@@ -63,7 +63,7 @@ router.delete("/delete-registration", authMiddleware, async (req, res) => {
     await Match.findOneAndUpdate({_id: req.body.match},
       { $pull: { registeredUsers: req.body.userId } }
     );
-    res.status(200).send({ message: "Ви успішно відмінили реєстрацію на цей матч", success: true });
+    res.status(200).send({ message: "Ви успішно скасували реєстрацію на цей матч", success: true });
   } catch (error) {
     res.status(500).send({ success: false, message: error.message });
   }

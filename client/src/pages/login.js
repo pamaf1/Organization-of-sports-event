@@ -37,11 +37,11 @@ function Login() {
                     <Form.Item label="Email" name='email'>
                         <input type="text" />
                     </Form.Item>
-                    <Form.Item label="Password" name='password'>
+                    <Form.Item label="Пароль" name='password'>
                         <input type="password" />
                     </Form.Item>
                     <div className='d-flex justify-content-between align-items-center'>
-                        <Link to="/registration">Registration</Link>
+                        <Link to="/registration">Реєстрація</Link>
                         <button className='secondary-btn' type='submit'>Login</button>
                     </div>
                 </Form>

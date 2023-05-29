@@ -10,7 +10,7 @@ function MatchForm({showMatchForm, setShowMatchForm, type = 'add', selectedMatch
     const dispatch = useDispatch();
     const [selectedDate, setSelectedDate] = useState('');
     const [selectedTime, setSelectedTime] = useState('');
-
+    const [isButtonDisabled, setButtonDisabled] = useState(false);
     const handleDateChange = (e) => {
         const dateValue = e.target.value;
         setSelectedDate(dateValue);
@@ -31,12 +31,17 @@ function MatchForm({showMatchForm, setShowMatchForm, type = 'add', selectedMatch
 
     const addMatch = async (values) => {
         try {
+            if (isButtonDisabled) {
+                return;
+              }        
             dispatch(ShowLoading())
             let response = null;
             if(type === 'add'){
+                setButtonDisabled(true);
                 response = await axiosInstance.post('https://match-organize.onrender.com/api/matches/', values)
             }
             else{
+                setButtonDisabled(true);
                 response = await axiosInstance.put('https://match-organize.onrender.com/api/matches/update-match', {
                     ...values,
                     _id: selectedMatch._id
@@ -105,7 +110,7 @@ function MatchForm({showMatchForm, setShowMatchForm, type = 'add', selectedMatch
                     </Col>
                 </Row>
                 <div className='d-flex justify-content-end'>
-                    <button className='secondary-btn' type="submit">Зберегти</button>
+                    <button className='secondary-btn' type="submit" disabled={isButtonDisabled}>Зберегти</button>
                 </div>
             </Form>
         </Modal>
