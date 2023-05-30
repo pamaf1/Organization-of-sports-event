@@ -33,7 +33,17 @@ function MatchInfo() {
         try {
             if (isButtonDisabled) {
                 return;
-            }        
+            }
+
+            const currentDateTime = new Date();
+            const matchEndDateTime = new Date(match?.date + 'T' + match?.time + 'Z')
+            matchEndDateTime.setHours(matchEndDateTime.getHours() - 3);
+
+            if (currentDateTime > matchEndDateTime) {
+                message.error("Реэстрація на цей матч вже завершена");
+                return;
+            }
+
             dispatch(ShowLoading());
             setButtonDisabled(true);
             const response = await axiosInstance.post("https://match-organize.onrender.com/api/registration/", {
@@ -86,6 +96,9 @@ function MatchInfo() {
                     </h1>
                     <p className="text-small">
                         Адреса проведення: {match?.place}
+                    </p>
+                    <p className="text-small">
+                        Вид командного спорту: {match?.type}
                     </p>
                     <p className="text-small">
                         Дата проведення: {makeDate(match?.date)}
