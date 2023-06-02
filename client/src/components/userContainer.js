@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Rate } from "antd";
 import "../resources/userContainers.css";
 
-
 function UserContainer({user}) {
     const navigation = useNavigate();
     return (

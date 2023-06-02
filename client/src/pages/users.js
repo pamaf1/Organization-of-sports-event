@@ -14,7 +14,6 @@ function Users() {
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [searchForm] = Form.useForm();
 
-  
     const getUsers = async () => {
         try {
             dispatch(ShowLoading());
@@ -33,7 +32,6 @@ function Users() {
             message.error(error.message);
         }
     }
-
 
     useEffect(() => {
         getUsers();
@@ -61,12 +59,12 @@ function Users() {
 
     const handlePageChange = (page, pageSize) => {
         setCurrentPage(page);
-      };
+    };
     
       const handlePageSizeChange = (current, size) => {
         setCurrentPage(1);
         setPageSize(size);
-      };
+    };
     
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = startIndex + pageSize;

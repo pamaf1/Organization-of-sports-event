@@ -34,13 +34,12 @@ function MatchInfo() {
             if (isButtonDisabled) {
                 return;
             }
-
             const currentDateTime = new Date();
             const matchEndDateTime = new Date(match?.date + 'T' + match?.time + 'Z')
             matchEndDateTime.setHours(matchEndDateTime.getHours() - 3);
 
             if (currentDateTime > matchEndDateTime) {
-                message.error("Реэстрація на цей матч вже завершена");
+                message.error("Реєстрація на цей матч вже завершена");
                 return;
             }
 
@@ -133,8 +132,6 @@ function MatchInfo() {
                         </div>
                     )
                 }
-
-  
             </Col>
           </Row>
         )}

@@ -128,12 +128,6 @@ function AdminUsers() {
         <div>
             <div className="d-flex justify-content-between">
                 <h1>Користувачі</h1>
-                {/* <Search
-                  placeholder="Пошук по логіну"
-                  allowClear
-                  onSearch={handleSearch}
-                  style={{ width: 200, height: '50px' }}
-                /> */}
             </div>
             <Form form={searchForm} layout="vertical" onFinish={handleSearch} style={{padding: '15px'}}>
                 <Row gutter={[16, 16]}>

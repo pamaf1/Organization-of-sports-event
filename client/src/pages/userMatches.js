@@ -37,7 +37,6 @@ function UserMatches() {
     const deleteMatch = async (id) => {
         try {
             dispatch(ShowLoading());
-            // const matchResponse = await axiosInstance.post('/api/matches/delete-match', {_id: id});
             const matchResponse = await DeleteMatch({_id: id._id});
             message.success(matchResponse.message);
             getMatches();
